@@ -1,0 +1,64 @@
+<div class="row m-0 mt-1">
+    <div class="col-md-12">
+        <mat-card class="example-card">
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-card-title>Employee Details</mat-card-title>
+                </div>
+                <div class="col-md-1 m-t-11" style="left: 1180px;">
+                    <button mat-mini-fab aria-label="Add User" color="primary" (click)="onAddEmployee()">
+                        <mat-icon>add</mat-icon>
+                    </button>
+                </div>
+
+            </div>
+
+            <mat-card-content style="width: 100%;">
+                <div class="mat-elevation-z8">
+                    <div class="table-responsive p-5">
+                        <table class="table table-bordered" style="text-align: center;">
+                            <thead>
+                                <tr>
+                                    <th>Id.</th>
+                                    <th> Name</th>
+                                    <th>User Name</th>
+                                    <th>Email Id</th>
+                                    <th>Website</th>
+
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let employee of arrDataSource">
+                                    <td>{{employee.id}}
+                                    </td>
+                                    <td>
+                                        {{employee.name}}
+                                    </td>
+                                    <td>{{employee.username}}</td>
+                                    <td>{{employee.email}}</td>
+                                    <td>{{employee.website}}</td>
+                                    <td>
+                                        <span>
+                                            <mat-icon style="cursor: hand;cursor: pointer;"
+                                                (click)="getEmployeeDetails(employee, 'edit')">
+                                                create</mat-icon>
+                                            <mat-icon (click)="deleteEmploye(employee.id)"
+                                                style="cursor: hand;cursor: pointer;">delete</mat-icon>
+
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            </mat-card-content>
+
+        </mat-card>
+    </div>
+</div>

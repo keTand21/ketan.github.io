@@ -1,0 +1,259 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* You can add global styles to this file, and also import other style files */
+
+@import '~swiper/dist/css/swiper.min.css';
+@import '../node_modules/@angular/material/prebuilt-themes/indigo-pink.css';
+// Color 1 scss
+@import './assets/scss/color1.scss';
+.product-list .media-image img {
+    height: 71px;
+    width: 79px;
+    border-radius: 3px;
+}
+
+.product-img .media-image img {
+    height: 150px;
+    width: 150px;
+    border-radius: 3px;
+}
+
+.wishlisted {
+    color: red;
+}
+
+.title-wrap label {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    /* height: 50px; */
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.product-img {
+    min-height: 162px;
+}
+
+.color {
+    color: blue;
+}
+
+.dropdown {
+    .mat-select-arrow {
+        visibility: hidden;
+    }
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.margins {
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+.borderColor {
+    border: 1px solid #28a745 !important;
+    width: 112px;
+}
+
+.button {
+    border: 1px solid #28a745 !important;
+}
+
+.margin {
+    margin-left: 650px;
+}
+
+.buttonsize {
+    top: -5px;
+    left: -1px;
+}
+
+.norecord {
+    background-color: #003861;
+}
+
+.margintotal {
+    left: 70px;
+}
+
+.totalcolor {
+    color: red;
+}
+
+.imagewidth {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.total {
+    margin-left: 360px;
+    font-size: inherit;
+}
+
+.proceedcheckout {
+    margin-top: 18px;
+    left: 237px;
+}
+
+.continueshopping {
+    right: 970px;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+.padding {
+    margin-top: 15px;
+}
+
+.imagesize {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.cancelotpbutton {
+    left: 8px;
+}
+
+.saveotpbutton {
+    left: 12px;
+}
+
+.resendotpbutton {
+    left: 9px;
+}
+
+.bottombutton {
+    bottom: 7px;
+}
+
+#ToBeApplied td+td {
+    padding-top: 40px;
+}
+
+.lableflied {
+    width: 200px;
+}
+
+.forgetbutton {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.loginbutton {
+    width: 100px;
+}
+
+div.box {
+    width: 120px;
+    height: 120px;
+    border: thin solid #ced4da;
+}
+
+div.box:focus {
+    width: 120px;
+    height: 120px;
+    border: thin solid red;
+}
+
+.imagewidth {
+    max-height: 100px;
+    max-width: 100px;
+    padding-top: 10px;
+}
+
+.daterangepicker {
+    position: relative;
+    border-radius: 6px;
+    padding: 9px;
+    border: 1px #adadad solid;
+    font-size: 16px;
+}
+
+.md-drppicker.double {
+    width: 630px !important;
+}
+
+.md-drppicker .btn.btn-default {
+    margin-right: 11px !important;
+}
+
+.md-drppicker.drops-down-auto.ltr.shown.double.show-ranges {
+    left: -281px !important;
+}
+
+input#calendar-input {
+    height: 38px;
+    width: 179px;
+}
+
+.m-t-11 {
+    padding-top: 11px;
+}
+
+.marginleft {
+    margin-left: 15px;
+}
+
+.productMrp {
+    color: #003861;
+    font-weight: 500;
+    font-size: larger;
+}
+
+.left-info-panel {
+    padding: 20px;
+}
+
+.contact-form {
+    padding: 20px;
+}
+
+.bottom {
+    bottom: 10px;
+}
+
+.border {
+    border: 1px solid #ced4da !important;
+}
+
+.backButton {
+    left: 1210px;
+    bottom: 10px;
+}
+
+.adjest {
+    bottom: 38px;
+    left: 120px;
+}
+
+.spece {
+    margin-left: 5px;
+}
+
+.processspace {
+    margin-left: 5px;
+}
+
+.profilecancel {
+    left: 255px;
+}
+
+.profilesave {
+    left: 270px;
+}
+
+.passwordtop {
+    top: 20px;
+}
+.space{
+    flex: 1 1 auto; 
+}

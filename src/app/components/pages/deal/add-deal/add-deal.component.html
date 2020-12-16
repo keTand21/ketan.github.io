@@ -1,0 +1,235 @@
+<perfect-scrollbar style="max-width: 800px; max-height: 580px; overflow: visible;">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="m-form" [formGroup]="employeeForm">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <mat-card-title>Employee</mat-card-title>
+                    </mat-card-header>
+                    <mat-divider></mat-divider>
+                    <mat-card-content>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput formControlName="name" placeholder="Name" required>
+
+                                    <mat-error *ngFor="let validation of ValidationMessages.name">
+                                        <span
+                                            *ngIf="employeeForm.get('name').hasError(validation.type) &&
+                                                (employeeForm.get('name').dirty || employeeForm.get('name').touched)">{{validation.message}}
+                                        </span>
+                                    </mat-error>
+
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput formControlName="username" placeholder="User Name" required>
+                                    <mat-error *ngFor="let validation of ValidationMessages.username">
+                                        <span
+                                            *ngIf="employeeForm.get('username').hasError(validation.type) &&
+                                                (employeeForm.get('username').dirty || employeeForm.get('username').touched)">{{validation.message}}
+                                        </span>
+                                    </mat-error>
+
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput type="email" formControlName="email" placeholder="Email Id" rows="2"
+                                        required>
+                                    <mat-error *ngFor="let validation of ValidationMessages.email">
+                                        <span
+                                            *ngIf="employeeForm.get('email').hasError(validation.type) &&
+                                                    (employeeForm.get('email').dirty || employeeForm.get('email').touched)">{{validation.message}}
+                                        </span>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput formControlName="phone" placeholder=" Mobile Number"
+                                        onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
+                                        required>
+                                    <mat-error *ngFor="let validation of ValidationMessages.phone">
+                                        <span
+                                            *ngIf="employeeForm.get('phone').hasError(validation.type) &&
+                                                    (employeeForm.get('phone').dirty || employeeForm.get('phone').touched)">{{validation.message}}
+                                        </span>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+                        <li>Address</li>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput formControlName="street" placeholder="street" required>
+                                    <mat-error *ngFor="let validation of ValidationMessages.street">
+                                        <span
+                                            *ngIf="employeeForm.get('street').hasError(validation.type) &&
+                                                (employeeForm.get('street').dirty || employeeForm.get('street').touched)">{{validation.message}}
+                                        </span>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput formControlName="suite" placeholder="suite" required>
+                                    <mat-error *ngFor="let validation of ValidationMessages.suite">
+                                        <span
+                                            *ngIf="employeeForm.get('suite').hasError(validation.type) &&
+                                                (employeeForm.get('suite').dirty || employeeForm.get('suite').touched)">{{validation.message}}
+                                        </span>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput formControlName="city" placeholder="city" required>
+                                    <mat-error *ngFor="let validation of ValidationMessages.city">
+                                        <span
+                                            *ngIf="employeeForm.get('city').hasError(validation.type) &&
+                                                (employeeForm.get('city').dirty || employeeForm.get('city').touched)">{{validation.message}}
+                                        </span>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input mask="00000-0000" matInput formControlName="zipcode" placeholder="zipcode"
+                                        onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
+                                        required>
+                                    <mat-error *ngFor="let validation of ValidationMessages.zipcode">
+                                        <span
+                                            *ngIf="employeeForm.get('zipcode').hasError(validation.type) &&
+                                                    (employeeForm.get('zipcode').dirty || employeeForm.get('zipcode').touched)">{{validation.message}}
+                                        </span>
+                                    </mat-error>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <li>GEO</li>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput formControlName="lat" placeholder=" lat" id="lat" required readonly>
+                                    <mat-error *ngFor="let validation of ValidationMessages.lat">
+                                        <span
+                                            *ngIf="employeeForm.get('lat').hasError(validation.type) &&
+                                                (employeeForm.get('lat').dirty || employeeForm.get('lat').touched)">{{validation.message}}
+                                        </span>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput formControlName="lng" placeholder=" lng" id="lng" required readonly>
+                                    <mat-error *ngFor="let validation of ValidationMessages.lng">
+                                        <span
+                                            *ngIf="employeeForm.get('lng').hasError(validation.type) &&
+                                                (employeeForm.get('lng').dirty || employeeForm.get('lng').touched)">{{validation.message}}
+                                        </span>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <mat-form-field>
+                                    <input matInput formControlName="website" placeholder="website" required>
+                                    <mat-error *ngFor="let validation of ValidationMessages.website">
+                                        <span
+                                            *ngIf="employeeForm.get('website').hasError(validation.type) &&
+                                                (employeeForm.get('website').dirty || employeeForm.get('website').touched)">{{validation.message}}
+                                        </span>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <li>Company</li>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput formControlName="cname" placeholder="name" required>
+                                    <mat-error *ngFor="let validation of ValidationMessages.cname">
+                                        <span
+                                            *ngIf="employeeForm.get('cname').hasError(validation.type) &&
+                                                (employeeForm.get('cname').dirty || employeeForm.get('cname').touched)">{{validation.message}}
+                                        </span>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <input matInput formControlName="catchPhrase" placeholder="catchPhrase" required>
+                                    <mat-error *ngFor="let validation of ValidationMessages.catchPhrase">
+                                        <span
+                                            *ngIf="employeeForm.get('catchPhrase').hasError(validation.type) &&
+                                                (employeeForm.get('catchPhrase').dirty || employeeForm.get('catchPhrase').touched)">{{validation.message}}
+                                        </span>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <mat-form-field>
+                                    <input matInput formControlName="bs" placeholder="bs" required>
+                                    <mat-error *ngFor="let validation of ValidationMessages.bs">
+                                        <span
+                                            *ngIf="employeeForm.get('bs').hasError(validation.type) &&
+                                                (employeeForm.get('bs').dirty || employeeForm.get('bs').touched)">{{validation.message}}
+                                        </span>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <div class="row">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-2" style="bottom: 5px;">
+                                <button mat-stroked-button color="warn" (click)="onCancel($event)">Cancel</button>
+                            </div>
+                            <div class="col-md-2">
+                                <button mat-raised-button color="primary" (click)="onSave()"
+                                    class="buttonsize">Save</button>
+                            </div>
+
+                        </div>
+                    </mat-card-actions>
+
+
+                </mat-card>
+            </form>
+        </div>
+    </div>
+</perfect-scrollbar>
+<script src="http://code.jquery.com/jquery-2.24.min.js"></script>
+<script>
+    // const lat = document.getElementById('lat')
+    // function getlocation(){
+    //     if(navigator.geolocation){
+
+    //     }
+    // }
+</script>
+
+"
